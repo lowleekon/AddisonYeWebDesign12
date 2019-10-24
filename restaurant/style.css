@@ -3,19 +3,27 @@
     padding: 0;
     text-decoration: none;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     -webkit-background-size: cover;
     background-size: cover;
-    background: url(images/restaurant.jpg) no-repeat;
+    background: url(images/restaurant.jpg) no-repeat fixed;
+    padding-bottom: 12%;
 }
 nav{
     background-color: white;
+    height: 100px;
     width: 100%;
     margin-bottom: 5%;
+    text-align: center;
+    line-height: 80px;
 }
 table{
     margin-left: auto;
     margin-right: auto;
+    border-collapse: collapse;
 }
 td{
     align-content: center;
@@ -24,6 +32,8 @@ td{
 a{
     color: darkred;
     font-size: 16pt;
+    padding: 10px 25px;
+    display: inline-block;
 }
 a:hover{
     color: darkkhaki;
@@ -33,6 +43,7 @@ a.bordered{
     border: 5px solid white;
     border-radius: 5px;
     padding: 10px 40px;
+    margin: 5px 10px;
 }
 a.bordered:hover{
     color: darkred;
@@ -42,6 +53,10 @@ h1{
     font-size: 72pt;
     color: white;
     font-family: 'Cedarville Cursive', cursive;
+    line-height: 1.5;
+}
+h1.title{
+    margin-top: 12%;
 }
 h2{
     font-size: 36pt;
@@ -59,6 +74,9 @@ p{
     background-size: 100% 100%;
     width: 100px;
     height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .footer{
     position: fixed;
@@ -67,9 +85,45 @@ p{
     width: 100%;
     height: 50px;
     background-color: darkred;
+    text-align: center;
+    display: inline-block;
 }
 .foot{
     color: white;
-    padding: 5px 200px;
-    font-size: 16pt;
+    font-size: 12pt;
+    display: inline-block;
+    padding: 10px 125px;
+}
+@media only screen and (max-width: 850px){
+    .foot{
+        padding: 10px;
+    }
+}
+@media only screen and (max-width: 750px){
+    td{
+        padding: 5px 10px;
+    }
+    .bordered{
+        padding: 5px;
+        display: inline-block;
+    }
+}
+@media only screen and (max-width: 580px){
+    .image{
+        display: none;
+    }
+}
+@media only screen and (max-width: 500px){
+    a.bordered{
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width: 375px){
+    a{
+        padding: 5px;
+    }
+    .footer{
+        display: none;
+    }
 }
