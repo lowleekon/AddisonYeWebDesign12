@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js</title>
+    <script src="script.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="toggleMenu" onclick="toggleMenu()"></div>
+    <nav id="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Cases</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="mainBanner" id="mainBanner">
+        <div class="imgBannerBTN imgBannerBTN-PREV" id="imgBannerBTN-PREV"></div>
+        <div class="imgBanner" id="imgBanner3">
+            <div class="imgBanner-BOX">
+                <h2>3</h2>
+                <p>On a wop</p>
+            </div>
+        </div>
+        <div class="imgBanner" id="imgBanner2">
+            <div class="imgBanner-BOX">
+                <h2>2</h2>
+                <p>On a woop</p>
+            </div>
+        </div>
+        <div class="imgBanner" id="imgBanner1">
+            <div class="imgBanner-BOX">
+                <h2>1</h2>
+                <p>On a woooop</p>
+            </div>
+        </div>
+        <div class="imgBannerBTN imgBannerBTN-NEXT" id="imgBannerBTN-NEXT"></div>
+    </div>
+    <script>
+        document.getElementById("mainBanner").onmouseenter = function(){clearInterval(startbannerLoop);};
+        document.getElementById("mainBanner").onmouseleave = function(){
+            startbannerLoop = setInterval(function(){
+                bannerLoop();
+            }, bannerTimer);
+        };
+        document.getElementById("imgBannerBTN-PREV").onclick = function(){
+            bannerLoopBack();
+        };
+        document.getElementById("imgBannerBTN-NEXT").onclick = function(){
+            bannerLoop();
+        };
+    </script>
+</body>
+</html>
